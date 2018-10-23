@@ -164,7 +164,7 @@ module Kitchen
         threads = []
         @action_errors = []
         concurrency.times do
-          sleep 3
+          sleep 1
           threads << Thread.new do
             while (instance = queue.pop)
               run_action_in_thread(action, instance, *args)
